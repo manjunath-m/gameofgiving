@@ -1,4 +1,4 @@
-package gog.persistance.repository;
+package gog.persistance.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
