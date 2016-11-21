@@ -1,4 +1,4 @@
-package hello;
+package com.gog.controller;
 
 import org.joda.time.LocalTime;
 

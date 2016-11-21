@@ -14,7 +14,7 @@ apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'application'
 apply plugin: 'war'
-mainClassName = 'hello.Application'
+mainClassName = 'com.gog.Application'
 
 jar {
     baseName = 'gs-serving-web-content'

@@ -1,7 +1,4 @@
-package gog.controller;
-
-import gog.core.PersonSevice;
-import gog.persistance.entity.Person;
+package com.gog.controller;
 
 import java.util.List;
 
@@ -11,18 +8,21 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.gog.core.UserSevice;
+import com.gog.core.users.UserDto;
+
 @Controller
 public class UsersController {
 
 	@Autowired
-	PersonSevice service;
+	UserSevice service;
 
-	@RequestMapping("users")
-	public ResponseEntity<List<Person>> getUsers() {
+	@RequestMapping("/users")
+	public ResponseEntity<List<UserDto>> getUsers() {
 
 		System.out.println("Getting users");
-		List<Person> users = service.getUsers();
+		List<UserDto> users = service.getUsers();
 
-		return new ResponseEntity<List<Person>>(users, HttpStatus.OK);
+		return new ResponseEntity<List<UserDto>>(users, HttpStatus.OK);
 	}
 }
