@@ -1,4 +1,4 @@
-package com.gog.controller;
+package com.gog.rest.controller;
 
 import java.util.List;
 

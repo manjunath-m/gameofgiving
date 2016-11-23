@@ -30,14 +30,19 @@ targetCompatibility = 1.8
 
 dependencies {
 	compile ("joda-time:joda-time:2.2")
-    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
-    compile("org.springframework.boot:spring-boot-devtools")
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
     compile 'org.hibernate:hibernate-core:5.2.4.Final'
     compile 'mysql:mysql-connector-java:5.1.31'
     compile 'javax.servlet:javax.servlet-api:3.1.0'
 //    compile 'javassist:javassist:3.12.1.GA'
     compile 'commons-dbcp:commons-dbcp:1.4'  
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    //Required dependency for JSP
+    providedRuntime 'org.apache.tomcat.embed:tomcat-embed-jasper'
+    //compile 'javax.el:javax.el-api:3.0.0'
+    // https://mvnrepository.com/artifact/org.glassfish/javax.el
+	compile 'org.glassfish:javax.el:3.0.0'
+    
     testCompile("junit:junit")
 }
 
